@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы исходного кода">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Conroller">
+      <UniqueIdentifier>{1d349306-65d3-4af3-abf7-444bd45eab21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Model">
+      <UniqueIdentifier>{286c10d2-1fff-4bd6-adc1-ead7bf472df1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\View">
+      <UniqueIdentifier>{7ae60366-0d91-463f-8a7f-104a3bda2be4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\View\Console">
+      <UniqueIdentifier>{68fcacd0-99dc-4ffd-b070-4b534acb75b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\View\Windows">
+      <UniqueIdentifier>{4ede72f1-96ac-401a-9104-38b500adaa73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Model">
+      <UniqueIdentifier>{637e24d7-2fa1-4255-9711-d859bd5fd536}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\View">
+      <UniqueIdentifier>{9d9cb6a6-5e33-4421-b3c7-840b1d825564}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\View\Console">
+      <UniqueIdentifier>{ffa4c7ba-dfa8-4151-b746-5ad41612051b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\View\Windows">
+      <UniqueIdentifier>{94d38148-ed63-41fa-b8a6-cd284e047a54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Controller">
+      <UniqueIdentifier>{30ed1c72-5847-4769-a056-039c342dec2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Model\Options">
+      <UniqueIdentifier>{5f0d6f20-6220-427b-b7d0-d8b6b5b3608c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Model\Options">
+      <UniqueIdentifier>{5cfe5d44-5476-406b-a185-5e24c34b25f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Commons">
+      <UniqueIdentifier>{1f268d45-04e9-44f8-888c-41db41090f1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Commons\Logger">
+      <UniqueIdentifier>{902cc390-d4f8-4b8f-ab44-4f4ffc1b7c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы исходного кода\Commons\String">
+      <UniqueIdentifier>{41d3bc3d-0d83-4bc5-8e31-57e87a72af90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Commons">
+      <UniqueIdentifier>{e590eeb6-ba4e-4e6e-833b-b3df66da5df5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Commons\Logger">
+      <UniqueIdentifier>{af0857a8-603d-4878-9ca1-f83de9560849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Заголовочные файлы\Commons\String">
+      <UniqueIdentifier>{87a4a5a2-6a78-4414-9269-01ac5200b552}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Model\CFinder.cpp">
+      <Filter>Файлы исходного кода\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="src\View\Console\CConsoleView.cpp">
+      <Filter>Файлы исходного кода\View\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Model\Options\SFileSize.cpp">
+      <Filter>Файлы исходного кода\Model\Options</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Model\Options\STimePeriod.cpp">
+      <Filter>Файлы исходного кода\Model\Options</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Model\Options\CFindOptions.cpp">
+      <Filter>Файлы исходного кода\Model\Options</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Model\Options\SFileDesc.cpp">
+      <Filter>Файлы исходного кода\Model\Options</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Commons\String\CDString.cpp">
+      <Filter>Файлы исходного кода\Commons\String</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Commons\String\Character.cpp">
+      <Filter>Файлы исходного кода\Commons\String</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Commons\Logger\CLogger.cpp">
+      <Filter>Файлы исходного кода\Commons\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Controller\CController.cpp">
+      <Filter>Файлы исходного кода\Controller</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Model\CFinder.h">
+      <Filter>Заголовочные файлы\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\View\Console\CConsoleView.h">
+      <Filter>Заголовочные файлы\View\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Model\Options\CFindOptions.h">
+      <Filter>Заголовочные файлы\Model\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Model\Options\SFileSize.h">
+      <Filter>Заголовочные файлы\Model\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Model\Options\STimePeriod.h">
+      <Filter>Заголовочные файлы\Model\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Model\IModelSubject.h">
+      <Filter>Заголовочные файлы\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Model\Options\SFileDesc.h">
+      <Filter>Заголовочные файлы\Model\Options</Filter>
+    </ClInclude>
+    <ClInclude Include="src\View\IView.h">
+      <Filter>Заголовочные файлы\View</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Controller\IControllerObserver.h">
+      <Filter>Заголовочные файлы\Conroller</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Controller\IObserver.h">
+      <Filter>Заголовочные файлы\Conroller</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Controller\CController.h">
+      <Filter>Заголовочные файлы\Conroller</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Commons\String\CDString.h">
+      <Filter>Заголовочные файлы\Commons\String</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Commons\String\Character.h">
+      <Filter>Заголовочные файлы\Commons\String</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Commons\Logger\CLogger.h">
+      <Filter>Заголовочные файлы\Commons\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Commons\BasicDef.h">
+      <Filter>Заголовочные файлы\Commons</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
