@@ -143,78 +143,68 @@ void CConsoleView::UpdateInput()
 	if(mRun) return;
 	mRun = true;
 
-	// UI thread
-	auto ui  = [&]() -> void 
-	{ 
-		TCHAR _char = 0;
+	TCHAR _char = 0;
 
-		while (true)
+	while (true)
+	{
+		if(mSearchDone) break;
+
+		_char = getc(stdin);
+
+		if((_char == __T('s')) && mStartButtonEnable)
 		{
-			if(mSearchDone) break;
+			mController->AddStartDir(__T("D:/"));
+			mController->SetQuery(__T("*.cpp"));
+			mController->SetHideFilesFlag(false);
 
-			_char = getc(stdin);
+			SAFE_ADD_TO_LOG(mLogger, FG_BLACK|LOGGER_UI_BACKGROUND, __T("[Begin search]\n"));
 
-			if((_char == __T('s')) && mStartButtonEnable)
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_BLUE|LOGGER_UI_BACKGROUND);
+			_tcout << __T("Search started!\n") << std::endl;
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_WHITE|BG_BLACK);
+				
+			mController->StartSearch();
+			continue;
+		}
+
+		if((_char == __T('p')) && mPauseButtonEnable)
+		{
+			bool _pause = mController->GetPause();
+
+			if(_pause)
 			{
-				mController->AddStartDir(__T("D:/"));
-				mController->SetQuery(__T("*.cpp"));
-				mController->SetHideFilesFlag(false);
-
-				SAFE_ADD_TO_LOG(mLogger, FG_BLACK|LOGGER_UI_BACKGROUND, __T("[Begin search]\n"));
+				mController->UnPauseSearch();
 
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_BLUE|LOGGER_UI_BACKGROUND);
-				_tcout << __T("Search started!\n") << std::endl;
-				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_WHITE|BG_BLACK);
-				
-				mController->StartSearch();
-				continue;
-			}
-
-			if((_char == __T('p')) && mPauseButtonEnable)
-			{
-				bool _pause = mController->GetPause();
-
-				if(_pause)
-				{
-					mController->UnPauseSearch();
-
-					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_BLUE|LOGGER_UI_BACKGROUND);
-					_tcout << __T("  Search unpaused!\n") << std::endl;
-					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_WHITE|BG_BLACK);
-				}
-				else
-				{
-					mController->PauseSearch();
-
-					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_BLUE|LOGGER_UI_BACKGROUND);
-					_tcout << __T("  Search paused!\n") << std::endl;
-					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_WHITE|BG_BLACK);
-				}
-
-				continue;
-			}
-
-			if((_char == __T('a')) && mStopButtonEnable)
-			{
-				mController->StopSearch();
-				break;
-			}
-
-			if(_char != __T('\n'))
-			{
-				DString _c;
-				_c += _char;
-				SAFE_ADD_TO_LOG(mLogger, FG_LIGHTRED|LOGGER_UI_BACKGROUND, __T("Unknown command:") << _c.c_str() << __T("\n"));
+				_tcout << __T("  Search unpaused!\n") << std::endl;
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_WHITE|BG_BLACK);
 			}
+			else
+			{
+				mController->PauseSearch();
+
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_BLUE|LOGGER_UI_BACKGROUND);
+				_tcout << __T("  Search paused!\n") << std::endl;
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_WHITE|BG_BLACK);
+			}
+
+			continue;
 		}
-	};
 
-	mUIThread = thread(ui);
+		if((_char == __T('a')) && mStopButtonEnable)
+		{
+			mController->StopSearch();
+			break;
+		}
 
-	while (!mSearchDone){;}
-
-	mUIThread.join();
+		if(_char != __T('\n'))
+		{
+			DString _c;
+			_c += _char;
+			SAFE_ADD_TO_LOG(mLogger, FG_LIGHTRED|LOGGER_UI_BACKGROUND, __T("Unknown command:") << _c.c_str() << __T("\n"));
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FG_WHITE|BG_BLACK);
+		}
+	}
 	
 	SAFE_ADD_TO_LOG(mLogger, FG_BLACK|LOGGER_UI_BACKGROUND, __T("[End search]\n"));
 }

@@ -1,10 +1,8 @@
-﻿Построение начато 18.02.2013 15:15:25.
+﻿Построение начато 18.02.2013 17:00:21.
      1>Проект "D:\CPP\Finder\Finder.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\build\Debug\\" /Fd".\build\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt src\Controller\CController.cpp src\View\Console\CConsoleView.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\build\Debug\\" /Fd".\build\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt src\View\Console\CConsoleView.cpp
          CConsoleView.cpp
-         CController.cpp
-         Создание кода...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CPP\Finder\\build\Debug\Finder.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\CPP\Finder\\build\Debug\Finder.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CPP\Finder\\build\Debug\Finder.lib" /MACHINE:X86 .\build\Debug\CLogger.obj
          .\build\Debug\CDString.obj
@@ -22,4 +20,4 @@
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:07.25
+Затраченное время: 00:00:04.15
